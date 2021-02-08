@@ -1,0 +1,221 @@
+!jsparrow.config
+
+selectedProfile: demo
+
+profiles:
+- name: anyMatch
+  rules:
+  - BracketsToControl
+  - WhileToForEach
+  - ForToForEach
+  - EnhancedForLoopToStreamAnyMatch
+- name: loops
+  rules:
+  - BracketsToControl
+  - MultiVariableDeclarationLine
+  - WhileToForEach
+  - ForToForEach
+
+- name: readability
+  rules:
+  - FunctionalInterface
+  - DiamondOperator
+  - OverrideAnnotation
+  - RearrangeClassMembers
+  - BracketsToControl
+  - MultiVariableDeclarationLine
+  - EnumsWithoutEquals
+  - PutIfAbsent
+  - RemoveDoubleNegation
+  - OptionalIfPresent
+  - GuardCondition
+  - RemoveEmptyStatement
+  - InefficientConstructor
+  - PrimitiveBoxedForString
+  - StringFormatLineSeparator
+  - IndexOfToContains
+  - ArithmethicAssignment
+  - WhileToForEach
+  - ForToForEach
+  - EnhancedForLoopToStreamForEach
+  - LambdaForEachIfWrapperToFilter
+  - StatementLambdaToExpression
+  - CodeFormatter
+
+- name: conventions
+  rules:
+  - TryWithResource
+  - MultiCatch
+  - FunctionalInterface
+  - CollectionRemoveAll
+  - ImmutableStaticFinalCollections
+  - DiamondOperator
+  - OverrideAnnotation
+  - SerialVersionUID
+  - BracketsToControl
+  - MultiVariableDeclarationLine
+  - EnumsWithoutEquals
+  - ReImplementingInterface
+  - PutIfAbsent
+  - DateDeprecated
+  - OptionalIfPresent
+  - GuardCondition
+  - RemoveUnnecessaryThrows
+  - RemoveNewStringConstructor
+  - InefficientConstructor
+  - PrimitiveBoxedForString
+  - IndexOfToContains
+  - StringLiteralEqualityCheck
+  - StringConcatToPlus
+  - UseIsEmptyOnCollections
+  - StringBufferToBuilder
+  - PrimitiveObjectUseEquals
+  - StringBuildingLoop
+
+- name: Lambdas
+  rules:
+  - FunctionalInterface
+  - MultiVariableDeclarationLine
+  - EnumsWithoutEquals
+  - ReImplementingInterface
+  - OptionalIfPresent
+  - EnhancedForLoopToStreamForEach
+  - LambdaForEachIfWrapperToFilter
+  - StatementLambdaToExpression
+  - LambdaForEachCollect
+  - LambdaForEachMap
+  - FlatMapInsteadOfNestedLoops
+  - EnhancedForLoopToStreamAnyMatch
+  - EnhancedForLoopToStreamFindFirst
+  - EnhancedForLoopToStreamSum
+  - StringBuildingLoop
+  - LambdaToMethodReference
+
+- name: demo
+  rules:
+    - StandardLogger
+    - StringUtils
+    - StatementLambdaToExpression
+    - StringLiteralEqualityCheck
+    - StringBufferToBuilder
+    - AvoidConcatenationInLoggingStatements
+    - EnhancedForLoopToStreamForEach
+
+- name: format
+  rules:
+    - CodeFormatter
+
+loggerRule:
+  addMissingLoggingStatement: ERROR
+  attachExceptionObject: true
+  printStacktraceReplaceOption: ERROR
+  systemErrPrintExceptionReplaceOption: ERROR
+  systemErrReplaceOption: ERROR
+  systemOutPrintExceptionReplaceOption: INFO
+  systemOutReplaceOption: INFO
+
+renamingRule:
+  addTodoComments: false
+  dollarReplacementOption: Leave
+  fieldTypes:
+  - private
+  - protected
+  - package-protected
+  - public
+  underscoreReplacementOption: Upper
+
+rules:
+ - TryWithResource
+ - MultiCatch
+ - FunctionalInterface
+ - CollectionRemoveAll
+ - ImmutableStaticFinalCollections
+ - DiamondOperator
+ - OverrideAnnotation
+ - SerialVersionUID
+ - RearrangeClassMembers
+ - BracketsToControl
+ - MultiVariableDeclarationLine
+ - EnumsWithoutEquals
+ - ReImplementingInterface
+ - PutIfAbsent
+ - MapGetOrDefault
+ - DateDeprecated
+ - RemoveDoubleNegation
+ - OptionalIfPresent
+ - OptionalMap
+ - OptionalFilter
+ - OptionalIfPresentOrElse
+ - RemoveNullCheckBeforeInstanceof
+ - GuardCondition
+ - CollapseIfStatements
+ - RemoveExplicitCallToSuper
+ - RemoveEmptyStatement
+ - RemoveUnnecessaryThrows
+ - RemoveModifiersInInterfaceProperties
+ - RemoveUnusedParameter
+ - ReorderModifiers
+ - UseListSort
+ - CollectionsFactoryMethods
+ - UseCollectionsSingletonList
+ - HideDefaultConstructorInUtilityClasses
+ - MakeFieldsAndVariablesFinal
+ - RemoveCollectionAddAll
+ - RemoveRedundantTypeCast
+ - UseFilesBufferedReader
+ - UseFilesBufferedWriter
+ - UsePredefinedStandardCharset
+ - UseParameterizedQuery
+ - UseParameterizedJPAQuery
+ - UseParameterizedLDAPQuery
+ - EscapeUserInputsInSQLQueries
+ - ReuseRandomObjects
+ - UseSecureRandomRule
+ - CreateTempFilesUsingJavaNIO
+ - RemoveNewStringConstructor
+ - InefficientConstructor
+ - PrimitiveBoxedForString
+ - StringFormatLineSeparator
+ - IndexOfToContains
+ - RemoveToStringOnString
+ - UseOffsetBasedStringMethods
+ - StringUtils
+ - StringLiteralEqualityCheck
+ - StringConcatToPlus
+ - UseIsEmptyOnCollections
+ - ArithmethicAssignment
+ - StringBufferToBuilder
+ - PrimitiveObjectUseEquals
+ - AvoidConcatenationInLoggingStatements
+ - WhileToForEach
+ - ForToForEach
+ - InsertBreakStatementInLoops
+ - EnhancedForLoopToStreamTakeWhile
+ - EnhancedForLoopToStreamForEach
+ - BufferedReaderLines
+ - LambdaForEachIfWrapperToFilter
+ - StatementLambdaToExpression
+ - LambdaForEachCollect
+ - LambdaForEachMap
+ - FlatMapInsteadOfNestedLoops
+ - EnhancedForLoopToStreamAnyMatch
+ - EnhancedForLoopToStreamFindFirst
+ - EnhancedForLoopToStreamSum
+ - StringBuildingLoop
+ - UseComparatorMethods
+ - LambdaToMethodReference
+ - UseArraysStream
+ - UseStringBuilderAppend
+ - UseStringJoin
+ - CodeFormatter
+ - StandardLogger
+ - FieldRenaming
+
+excludes:
+    excludeModules:
+      - eu.jsparrow.core
+    excludePackages:
+      - chart
+    excludeClasses:
+      - core.Attribute.java
+    
