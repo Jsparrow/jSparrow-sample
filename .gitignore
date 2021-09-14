@@ -63,3 +63,6 @@ buildNumber.properties
 
 # jenv
 .java-version
+
+# VS Code
+.code/
